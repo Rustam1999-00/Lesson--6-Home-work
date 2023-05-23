@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/page.css">
+
+<body>
+
+    <div class="wrapper mt-5 ">
+        <header class="headers d-flex aligin-items-center justify-content-between">
+            <div class="d-flex aligin-items-center">
+                <img src="/img/youtube.png" width="40" height="40" alt="youtube">
+                <h4 class="logo m-0">YouTube</h4>
+            </div>
+            <form class=" d-flex  align-items-center ">
+                <input class="search" placeholder="Search" type="text">
+                <button class="send " type="submit">
+                    <img src="/img/54481.png" width="20" height="20" alt="search">
+                </button>
+            </form>
+         
+            <a class="LinkVideo" href="/admin">
+                <img class="mt-2 LinkVideoImg" src="/img/addVideo.png" width="40" height="40" alt="search">
+
+            </a>
+            
+            <a href="/profilPage">
+                <h3 class="profil">
+                    <%=arr%>
+                </h3>
+            </a>
+        </header>
+        <hr class="text-light">
+        <main class="main">
+            <div class="menu">
+                <ol class="list">
+                    <li class="item">
+                      <a href="">
+                        <img src="/img/home.png" width="50" height="50" alt="">
+                      </a>
+                        <p class="text-light title_menu">Home</p>
+                    </li>
+                    <li class="item">
+                        <img src="/img/short.png" width="50" height="50" alt="">
+                        <p class="text-light title_menu">shorts</p>
+                    </li>
+                    <li class="item">
+                        <img src="/img/podpiski.png" width="50" height="50" alt="">
+                        <p class="text-light title_menu">Like</p>
+                    </li>
+                    <hr class="text-light">
+                </ol>
+            </div>
+            <div class="prodaction">
+              <ol class="videoList">
+                    <%posts.map((el=>{%>
+
+                   <li>  
+                   
+                    <video class="video" width="270" height="190" controls>
+                        <source  src="http://localhost:5000/src/uploads/<%=el.post%> " type="video/mp4">
+                      
+                        Your browser does not support the video tag.
+                      </video> 
+                    <p class="p-0 m-0 list_text"><%=el.name%></p>
+                    <p class="p-0 m-0 mb-2 list_text"><%=el.date%></p>
+                    <div class="likes">
+                     <button class="like_button">
+                        <img src="/img/like.png" width="30" height="30" alt="">
+                        <sub class="like">12</sub>
+                     </button>
+                     <button class="diz_like_button">
+                        <img src="/img/dizlike.png" width="30" height="30" alt="">
+                        <sub>0</sub>
+                     </button>
+                    </div>
+                      <li/>
+                      <%}))%>
+              </ol>
+
+
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+let like = document.querySelector('.likes');
+let count = document.querySelector('.like');
+
+count.addEventListener('click',(evt)=>{
+    evt.preventDefault();
+    count.innerHTML = 20
+})
+
+
+// function addVideo () {
+//   fetch("/admin",{method: "GET"})
+
+// }
+
+// add.addEventListener('click',(evt)=>{
+//     evt.preventDefault();
+//     console.log("salom");
+//     addVideo()
+
+  
+// })
+
+
+</script>
+
+</html>

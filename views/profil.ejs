@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<body class="bg-info">
+    <h1 class="text-center">Profil Page</h1>
+    <div class="container">
+        <h3 class="text-end">
+           UserName:<%=username%>
+        </h3>
+        <ol class="d-flex flex-wrap">
+              <li>
+                <video class="video" width="370" height="290" controls>
+                    <source  src="http://localhost:5000/src/uploads/<%=findPost.post%> " type="video/mp4">
+                  
+                    Your browser does not support the video tag.
+                  </video> 
+                  <h4>VideoName: <%=findPost.name%></h4>
+                  <p><%=findPost.date%></p>
+              </li>
+
+        </ol>
+    </div>
+</body>
+</html>

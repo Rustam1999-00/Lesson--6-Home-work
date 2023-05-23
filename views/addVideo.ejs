@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title> 
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Admin <br> Add Video </h2>
+    <form method="post" action="http://localhost:5000/video" enctype="multipart/form-data">
+      <div class="input-box">
+        <input type="text" placeholder="Enter image name" required name="name">
+      </div>
+     
+      <div class="input-box">
+        <input type="file" placeholder="Create file" required  name="video">
+      </div>
+    
+    
+      <div class="input-box button">
+        <input type="submit" value="Add Video">
+        <!-- <button class="addvidio" type="submit">Add Video</button> -->
+      </div>;
+
+      <div class="text">
+        <h3>Already have an account? 
+          
+           <a href="http://localhost:5000/login">Login now</a>
+        </h3>
+      </div>
+    </form>
+  </div>
+</body>
+<script>
+
+// let addvidio = document.querySelector('.addvidio');
+
+
+
+// function addvidios() {
+
+// fetch('http://localhost:5000/video',{
+//     method:'POST',
+//     headers: "Content-Type: application/json",
+
+//     body:
+
+// })
+
+// }
+
+// addvidio.addEventListener.on("submit", (evt)=>{
+//     evt.preventDefault();
+//  addvidios()
+// })
+
+</script>
+</html>
